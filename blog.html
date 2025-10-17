@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Insights | STACKLY Blog</title>
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="blog-main">
+      <section class="blog-hero">
+        <h1 class="hero-title">Legal Insights & Market Analysis</h1>
+        <p class="hero-subtitle">
+          Stay ahead of regulatory changes and leverage our deep industry
+          expertise.
+        </p>
+      </section>
+
+      <section class="featured-section">
+        <div class="featured-content">
+          <span class="featured-tag">Editor's Pick</span>
+          <h2>The Future of Data Privacy: CCPA vs. Global Standards</h2>
+          <p>
+            An in-depth analysis of how new US state laws are shaping
+            international tech litigation and compliance requirements for
+            multi-jurisdictional businesses.
+          </p>
+          <div class="article-meta">
+            <span class="meta-author">By Elias Vance</span>
+            <span class="meta-date">October 15, 2025</span>
+          </div>
+          <a href="404.html" class="read-more-btn">Read Full Article &rarr;</a>
+        </div>
+        <div class="featured-image-placeholder">
+          <img src="./assets/tree.png" alt="" />
+        </div>
+      </section>
+
+      <section class="blog-content-grid">
+        <div class="article-list-container">
+          <article class="article-card">
+            <div class="card-image-wrapper">
+              <img
+                src="./assets/financ.png"
+                alt="Article 2 Image"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A345B/FFD700?text=Post+Image+1'"
+              />
+              <span class="card-category">Finance Law</span>
+            </div>
+            <div class="card-body">
+              <h3>Fintech Regulatory Sandboxes: Opportunity or Trap?</h3>
+              <p>
+                Exploring the legal nuances and pitfalls of utilizing regulatory
+                sandboxes for new financial products in Europe and Asia.
+              </p>
+              <a href="404.html">Continue Reading →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image-wrapper">
+              <img
+                src="./assets/real.png"
+                alt="Article 3 Image"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A345B/FFD700?text=Post+Image+2'"
+              />
+              <span class="card-category">Real Estate</span>
+            </div>
+            <div class="card-body">
+              <h3>
+                The Impact of Climate Change on Commercial Lease Contracts
+              </h3>
+              <p>
+                How attorneys are incorporating environmental risk clauses into
+                long-term commercial real estate agreements.
+              </p>
+              <a href="404.html">Continue Reading →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="card-image-wrapper">
+              <img
+                src="./assets/employ.png"
+                alt="Article 4 Image"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A345B/FFD700?text=Post+Image+3'"
+              />
+              <span class="card-category">Employment</span>
+            </div>
+            <div class="card-body">
+              <h3>Remote Work Law: Defending Misclassification Lawsuits</h3>
+              <p>
+                A guide for employers on properly classifying hybrid and fully
+                remote workers to avoid costly litigation.
+              </p>
+              <a href="404.html">Continue Reading →</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="blog-sidebar">
+          <div class="sidebar-block search-block">
+            <h4>Search Insights</h4>
+            <form action="./404.html">
+              <input type="search" placeholder="Search blog..." />
+              <button type="submit">Go</button>
+            </form>
+          </div>
+
+          <div class="sidebar-block categories-block">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="404.html">Technology Law (12)</a></li>
+              <li><a href="404.html">Corporate Finance (8)</a></li>
+              <li><a href="404.html">Litigation (5)</a></li>
+              <li><a href="404.html">Family Law Insights (3)</a></li>
+              <li><a href="404.html">Regulatory News (15)</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block cta-block">
+            <h4>Need Direct Advice?</h4>
+            <p>Schedule a call with one of our attorneys today.</p>
+            <a href="404.html" class="sidebar-cta-btn">Book Consultation</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
