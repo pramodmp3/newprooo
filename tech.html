@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology Law Services | STACKLY</title>
+
+    <link rel="stylesheet" href="finance.css" />
+    <!-- Font Import: Inter for modern professionalism -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="family-law-main">
+      <!-- Retain class for layout consistency -->
+
+      <!-- --- UNIQUE SPLIT HERO SECTION --- -->
+      <section class="law-hero">
+        <div class="hero-text-content">
+          <p class="tagline">Legal Precision at the Speed of Innovation</p>
+          <h1>Securing IP, Data, and Compliance for the Digital Frontier.</h1>
+          <p class="description">
+            STACKLY empowers tech companies, startups, and enterprises to
+            navigate complex intellectual property, data privacy, and software
+            licensing challenges, ensuring scalable growth and legal integrity.
+          </p>
+          <a href="contact.html?service=TechLaw" class="cta-button"
+            >Connect with a Tech Attorney</a
+          >
+        </div>
+        <div class="hero-image-placeholder">
+          <!-- Placeholder for a stock image related to technology/digital security/code -->
+          <div class="image-box">
+            <img src="./assets/tree.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SERVICES AT A GLANCE (Icon Grid) --- -->
+      <section class="services-grid-section">
+        <h2 class="section-heading">Our Specialized Technology Law Services</h2>
+        <p class="sub-heading">
+          We cover the full spectrum of legal needs for software, hardware, AI,
+          and digital commerce companies.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-icon-card">
+            <span class="icon">🔒</span>
+            <h3>Data Privacy & Security (GDPR, CCPA)</h3>
+            <p>
+              Compliance and defense related to global data protection laws,
+              cross-border transfers, and breach response.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">💡</span>
+            <h3>Intellectual Property Strategy</h3>
+            <p>
+              Patent, trademark, and copyright procurement, portfolio
+              management, and defense litigation.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🤖</span>
+            <h3>AI & Machine Learning Law</h3>
+            <p>
+              Advising on ethical AI governance, liability issues, and
+              regulatory hurdles for advanced technologies.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">💾</span>
+            <h3>Software Licensing & Agreements</h3>
+            <p>
+              Drafting and negotiating SaaS agreements, EULAs, distribution, and
+              strategic partnership contracts.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🔗</span>
+            <h3>Blockchain & Digital Assets</h3>
+            <p>
+              Regulatory advice for cryptocurrency, tokenization, smart
+              contracts, and decentralized finance projects.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🕸️</span>
+            <h3>E-Commerce & Internet Law</h3>
+            <p>
+              Legal guidance on online terms of service, advertising
+              regulations, and platform liability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- WHY STACKLY FOR TECHNOLOGY LAW (Unique Block) --- -->
+      <section class="why-stackly-section">
+        <div class="why-content">
+          <h2>Why Choose STACKLY for Tech Law</h2>
+          <div class="feature-list">
+            <p>
+              <strong>Engineer Mindset:</strong> Our attorneys have technical
+              backgrounds, allowing us to understand your core innovation.
+            </p>
+            <p>
+              <strong>Global Readiness:</strong> Expertise in compliance
+              spanning multiple international jurisdictions (e.g., GDPR).
+            </p>
+            <p>
+              <strong>Future-Proofing:</strong> Building legal strategies
+              designed to adapt to rapid technological evolution.
+            </p>
+          </div>
+          <a href="./404.html" class="learn-more-link"
+            >Discover Our Tech Law Team →</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

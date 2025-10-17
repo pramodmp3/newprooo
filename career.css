@@ -1,0 +1,262 @@
+/* --- CSS VARIABLES (Ensure consistent with theme) --- */
+:root {
+  --primary-color: #0a1931; /* Deep Navy Blue */
+  --accent-color: #ffd700; /* Vibrant Gold */
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --card-bg: #fff;
+  --hover-bg: #1a345b;
+  --transition-speed: 0.3s;
+}
+
+/* --- BASE STYLES --- */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  background-color: var(--card-bg);
+}
+.logo-img {
+  height: 70px !important; /* Forces the correct size */
+  width: auto;
+  box-shadow: 0 0 10px rgb(#0a1931); /* Gold Glow */
+}
+
+.careers-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+/* Spacer for fixed header (must match height of your navbar) */
+.header-spacer {
+  height: 80px;
+}
+
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 60px 0 40px 0;
+}
+
+/* --- HERO SECTION (Unique Slant) --- */
+.careers-hero {
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 100px 20px 150px 20px; /* Extra padding for the slant */
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+/* Geometric Slanted Bottom Edge using clip-path or transform/pseudo-element */
+.careers-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Height of the slanted area */
+  background: var(--card-bg);
+  /* Creates a bold, geometric slant cutting into the navy hero */
+  transform: skewY(-3deg);
+  transform-origin: bottom left;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-color-muted);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all var(--transition-speed);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+.cta-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- SECTION 1: LIFE AT STACKLY --- */
+.culture-section {
+  max-width: 1200px;
+  margin: -100px auto 80px auto; /* Pulls content up over the slanted edge */
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.culture-card {
+  background: var(--hover-bg); /* Darker navy */
+  color: var(--text-color-light);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-bottom: 5px solid var(--accent-color);
+  transition: transform var(--transition-speed),
+    background-color var(--transition-speed);
+}
+
+.culture-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--primary-color);
+}
+
+.card-icon {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.culture-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color-light);
+  margin-bottom: 10px;
+}
+.culture-card p {
+  font-size: 0.95rem;
+  color: var(--text-color-muted);
+}
+
+/* --- SECTION 2: OPEN POSITIONS --- */
+.positions-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 25px 30px;
+  border: 1px solid var(--form-border);
+  border-radius: 8px;
+  transition: all var(--transition-speed);
+}
+
+/* Unique and Colorful Interactive Hover Effect */
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+  border-left: 5px solid var(--accent-color); /* Highlight bar */
+}
+
+.job-info h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 5px 0;
+}
+
+.job-meta {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.apply-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color var(--transition-speed);
+}
+
+.apply-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.talent-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.talent-note a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .careers-hero {
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+  .careers-hero::after {
+    height: 70px;
+    transform: skewY(-2deg);
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+  }
+  .apply-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

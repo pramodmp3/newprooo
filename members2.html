@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team - Meet the Experts</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="members2.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Main Navigation (Placeholder - integrate your actual navbar.html content here) -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Meet Our Talented Team</h1>
+        <p>
+          Behind every great product is an extraordinary team. Get to know the
+          people driving our innovation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="team-members-section">
+      <div class="container">
+        <h2>Our Dedicated Professionals</h2>
+        <div class="members-grid">
+          <!-- Member Card 1 -->
+          <div class="member-card">
+            <img
+              src="./files/m1.webp"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Jane Doe</h3>
+            <p class="member-title">CEO & Founder</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 2 -->
+          <div class="member-card">
+            <img
+              src="./files/m2.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>John Smith</h3>
+            <p class="member-title">Chief Technology Officer</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 3 -->
+          <div class="member-card">
+            <img
+              src="./files/m3.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Emily White</h3>
+            <p class="member-title">Head of Product</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 4 -->
+          <div class="member-card">
+            <img
+              src="./files/m4.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>David Green</h3>
+            <p class="member-title">Lead Analytics Engineer</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 5 -->
+          <div class="member-card">
+            <img
+              src="./files/m5.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Sarah Brown</h3>
+            <p class="member-title">Legal Consultatant</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 6 -->
+          <div class="member-card">
+            <img
+              src="./files/m6.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Michael Lee</h3>
+            <p class="member-title">Senior Law Specialist</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 7 -->
+          <div class="member-card">
+            <img
+              src="./files/m7.webp"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Olivia Chen</h3>
+            <p class="member-title">Marketing Director</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 8 -->
+          <div class="member-card">
+            <img
+              src="./files/m8.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Daniel Kim</h3>
+            <p class="member-title">Customer Success Manager</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+
+          <!-- Member Card 9 -->
+          <div class="member-card">
+            <img
+              src="./files/m9.jpg"
+              alt="Team Member Name"
+              class="member-photo"
+            />
+            <h3>Sophia Rodriguez</h3>
+            <p class="member-title">HR & Talent Acquisition</p>
+            <a href="./404.html" class="btn-know-more">Know More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

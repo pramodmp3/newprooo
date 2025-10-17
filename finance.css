@@ -1,0 +1,306 @@
+/* --- CSS VARIABLES (Ensure consistent with theme) --- */
+:root {
+  --primary-color: #0a1931; /* Deep Navy Blue */
+  --accent-color: #ffd700; /* Vibrant Gold */
+  --secondary-color: #f0f0f0; /* Light Gray for contrast */
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --transition-speed: 0.3s;
+}
+
+/* --- BASE STYLES --- */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+}
+.logo-img {
+  height: 70px !important; /* Forces the correct size */
+  width: auto;
+  box-shadow: 0 0 10px rgb(#0a1931); /* Gold Glow */
+}
+
+.family-law-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.header-spacer {
+  height: 80px;
+}
+
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 60px 0 10px 0;
+}
+
+.sub-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* --- UNIQUE SPLIT HERO SECTION --- */
+.law-hero {
+  display: flex;
+  min-height: 500px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text-content {
+  flex: 3; /* Takes 60% width */
+  padding: 80px 40px;
+  color: var(--text-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-image-placeholder {
+  flex: 2; /* Takes 40% width */
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    #ffeb8d
+  ); /* Creative gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-image-placeholder,
+img {
+  height: auto;
+  width: 100%;
+}
+.image-box {
+  width: 80%;
+  height: 80%;
+  /* border: 5px dashed var(--primary-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-text-content h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+}
+
+.hero-text-content .description {
+  font-size: 1.1rem;
+  color: var(--text-color-muted);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  align-self: flex-start;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 14px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all var(--transition-speed);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+}
+.cta-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8);
+}
+
+/* --- SERVICES AT A GLANCE (Unique Hover Grid) --- */
+.services-grid-section {
+  padding: 40px 20px;
+  background-color: var(--secondary-color);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-icon-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  transition: all var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Unique and Creative Hover Effect */
+.service-icon-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Gold Accent Overlay on Hover */
+.service-icon-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+  z-index: 0;
+  mix-blend-mode: soft-light; /* Makes the effect subtle and creative */
+}
+
+.service-icon-card:hover::after {
+  opacity: 0.5;
+}
+
+.service-icon-card * {
+  position: relative;
+  z-index: 1; /* Keep content above the overlay */
+}
+
+.icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  transition: transform var(--transition-speed);
+}
+
+.service-icon-card:hover .icon {
+  transform: rotate(5deg) scale(1.1); /* Subtle movement on hover */
+}
+
+.service-icon-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.service-icon-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* --- WHY STACKLY SECTION (Unique Block) --- */
+.why-stackly-section {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 60px 20px;
+  margin-top: 50px;
+  /* Slanted top edge for uniqueness */
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  margin-top: -30px;
+  padding-top: 90px;
+}
+
+.why-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-content h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.feature-list p {
+  flex: 1;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-left: 3px solid var(--accent-color);
+  text-align: left;
+  background: var(--hover-bg);
+  border-radius: 4px;
+}
+
+.feature-list strong {
+  color: var(--text-color-light);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.learn-more-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-speed);
+  display: inline-block;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.learn-more-link:hover {
+  border-bottom-color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .law-hero {
+    flex-direction: column;
+  }
+  .hero-image-placeholder {
+    min-height: 250px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-stackly-section {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text-content h1 {
+    font-size: 2.5rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labour & Employment Law Services | STACKLY</title>
+    <link rel="stylesheet" href="finance.css" />
+    <!-- Font Import: Inter for modern professionalism -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="family-law-main">
+      <!-- Retain class for layout consistency -->
+
+      <!-- --- UNIQUE SPLIT HERO SECTION --- -->
+      <section class="law-hero">
+        <div class="hero-text-content">
+          <p class="tagline">Workplace Clarity, Defensible Practices</p>
+          <h1>Protecting Your Business and Workforce from Risk.</h1>
+          <p class="description">
+            STACKLY advises corporations on the full lifecycle of employment,
+            from policy creation and regulatory compliance to high-stakes
+            litigation, fostering secure and productive workplaces.
+          </p>
+          <a href="contact.html?service=EmploymentLaw" class="cta-button"
+            >Consult Our Employment Team</a
+          >
+        </div>
+        <div class="hero-image-placeholder">
+          <!-- Placeholder for a stock image related to collaboration/HR/legal documents -->
+          <div class="image-box">
+            <img src="./assets/tree.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SERVICES AT A GLANCE (Icon Grid) --- -->
+      <section class="services-grid-section">
+        <h2 class="section-heading">Our Key Labour & Employment Services</h2>
+        <p class="sub-heading">
+          We mitigate risk and ensure legal clarity in all matters concerning
+          management and employees.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-icon-card">
+            <span class="icon">📝</span>
+            <h3>Workplace Policy & Handbooks</h3>
+            <p>
+              Drafting and reviewing comprehensive policies to ensure compliance
+              with federal and state regulations.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🕰️</span>
+            <h3>Wage & Hour Compliance</h3>
+            <p>
+              Auditing and advising on minimum wage, overtime, classification
+              (exempt/non-exempt), and record-keeping.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🛡️</span>
+            <h3>Discrimination & Harassment Defense</h3>
+            <p>
+              Vigorous defense against EEOC claims, internal investigations, and
+              training programs.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">💼</span>
+            <h3>Executive Contracts & Severance</h3>
+            <p>
+              Negotiating, drafting, and reviewing executive compensation,
+              non-competes, and separation agreements.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🔥</span>
+            <h3>Workplace Investigations</h3>
+            <p>
+              Conducting confidential, objective investigations into employee
+              misconduct and compliance issues.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🏭</span>
+            <h3>Labour Relations (Union Matters)</h3>
+            <p>
+              Representing management in collective bargaining, unfair labor
+              practice charges, and union avoidance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- WHY STACKLY FOR EMPLOYMENT LAW (Unique Block) --- -->
+      <section class="why-stackly-section">
+        <div class="why-content">
+          <h2>Why Partner with STACKLY for Employment Law</h2>
+          <div class="feature-list">
+            <p>
+              <strong>Management Focus:</strong> Our primary goal is protecting
+              management's interests and business continuity.
+            </p>
+            <p>
+              <strong>Proactive Auditing:</strong> We identify and neutralize
+              potential compliance risks before litigation arises.
+            </p>
+            <p>
+              <strong>Litigation Readiness:</strong> Experienced advocates
+              prepared to defend your company vigorously in court or before
+              regulatory bodies.
+            </p>
+          </div>
+          <a href="404.html" class="learn-more-link"
+            >See Our Approach to Risk Management →</a
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</html>

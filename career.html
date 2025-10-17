@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers | Join STACKLY</title>
+    <link rel="stylesheet" href="career.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="careers-main">
+      <section class="careers-hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Your Next Chapter Starts Here.</h1>
+          <p class="hero-subtitle">
+            STACKLY is seeking sharp minds ready to redefine legal technology
+            and service.
+          </p>
+          <a href="#positions" class="cta-button">See Open Positions</a>
+        </div>
+      </section>
+
+      <section class="culture-section">
+        <h2 class="section-heading">Work Culture at STACKLY</h2>
+
+        <div class="culture-grid">
+          <div class="culture-card">
+            <span class="card-icon">💡</span>
+            <h3>Innovation Hub</h3>
+            <p>
+              We invest heavily in legal tech, fostering an environment where
+              new ideas and process improvements are standard.
+            </p>
+          </div>
+
+          <div class="culture-card">
+            <span class="card-icon">⚖️</span>
+            <h3>Ethical Core</h3>
+            <p>
+              Integrity is non-negotiable. Our culture is built on transparency,
+              trust, and absolute dedication to justice.
+            </p>
+          </div>
+
+          <div class="culture-card">
+            <span class="card-icon">📈</span>
+            <h3>Career Velocity</h3>
+            <p>
+              We offer structured mentorship programs and clear pathways for
+              rapid professional growth and specialization.
+            </p>
+          </div>
+
+          <div class="culture-card">
+            <span class="card-icon">🤝</span>
+            <h3>Collaborative Teams</h3>
+            <p>
+              Cross-disciplinary teams ensure holistic client solutions,
+              promoting a supportive and high-performance environment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="positions" class="positions-section">
+        <h2 class="section-heading">Open Positions</h2>
+
+        <div class="job-list">
+          <div class="job-card">
+            <div class="job-info">
+              <h3>Senior Corporate Counsel</h3>
+              <p class="job-meta">
+                New York, NY | Full-Time | Corporate Law Division
+              </p>
+            </div>
+            <a href="./404.html" class="apply-btn">Apply Now</a>
+          </div>
+
+          <div class="job-card">
+            <div class="job-info">
+              <h3>Litigation Associate</h3>
+              <p class="job-meta">
+                Remote/Hybrid | Full-Time | Dispute Resolution
+              </p>
+            </div>
+            <a href="./404.html" class="apply-btn">Apply Now</a>
+          </div>
+
+          <div class="job-card">
+            <div class="job-info">
+              <h3>Legal Tech Analyst</h3>
+              <p class="job-meta">
+                New York, NY | Full-Time | Technology & Compliance
+              </p>
+            </div>
+            <a href="./404.html" class="apply-btn">Apply Now</a>
+          </div>
+
+          <div class="job-card">
+            <div class="job-info">
+              <h3>Paralegal - Real Estate</h3>
+              <p class="job-meta">
+                New York, NY | Full-Time | Real Estate Group
+              </p>
+            </div>
+            <a href="./404.html" class="apply-btn">Apply Now</a>
+          </div>
+
+          <div class="job-card">
+            <div class="job-info">
+              <h3>Junior Patent Attorney</h3>
+              <p class="job-meta">
+                Chicago, IL | Full-Time | Intellectual Property
+              </p>
+            </div>
+            <a href="./404.html" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+
+        <p class="talent-note">
+          Don't see your role? We are always looking for exceptional talent.
+          <a href="./404.html">Send us your resume.</a>
+        </p>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

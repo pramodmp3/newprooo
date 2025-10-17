@@ -1,0 +1,404 @@
+/* --- CSS Variables (Consistent Theme) --- */
+:root {
+  --primary-color: #0a1931; /* Deep Navy Blue */
+  --secondary-color: #1a345b; /* Lighter Navy/Hover BG */
+  --accent-color: #ffd700; /* Vibrant Gold */
+  --light-text: #f0f0f0;
+  --dark-text: #333333;
+  --transition-speed: 0.4s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  color: var(--dark-text);
+}
+.logo-img {
+  height: 70px !important; /* Forces the correct size */
+  width: auto;
+  box-shadow: 0 0 10px rgb(#0a1931); /* Gold Glow */
+}
+
+/* --- SPACERS (Must match the fixed header/footer heights) --- */
+.header-spacer {
+  height: 80px; /* Must match the fixed #main-header height */
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--primary-color)
+  );
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* =======================================
+SECTION 1: HERO SECTION & ANIMATION
+=======================================
+*/
+.hero-section {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  padding: 0 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  color: var(--light-text);
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #c0c0c0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: all var(--transition-speed);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.4);
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* --- ABSTRACT ANIMATION STYLING --- */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.animated-bg::before,
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 215, 0, 0.05),
+    rgba(255, 215, 0, 0.05) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  opacity: 0.3;
+}
+
+.animated-bg::before {
+  top: -50%;
+  left: -50%;
+  animation: flow-lines 30s linear infinite;
+}
+
+.animated-bg::after {
+  top: -75%;
+  left: -75%;
+  animation: flow-lines 45s linear infinite reverse;
+}
+
+@keyframes flow-lines {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+/* =======================================
+SECTION 2: SERVICES GRID
+=======================================
+*/
+.services-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all var(--transition-speed);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  background-color: #fff;
+  border-color: var(--accent-color);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 215, 0, 0.5); /* Creative Shadow */
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  color: var(--accent-color);
+}
+
+.card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 10px 0;
+}
+
+.service-card p {
+  color: var(--dark-text);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.service-card a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.service-card a:hover {
+  color: var(--accent-color);
+}
+
+/* =======================================
+SECTION 3: WHY CHOOSE US (Unique Design)
+=======================================
+*/
+.why-choose-us-section {
+  background-color: var(--secondary-color);
+  padding: 80px 20px;
+  color: var(--light-text);
+}
+
+.why-choose-us-section .section-heading {
+  color: var(--accent-color);
+}
+.why-choose-us-section .section-heading::after {
+  background: linear-gradient(to right, #fff, var(--accent-color));
+}
+
+.feature-blocks {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.feature-block {
+  background-color: var(--primary-color);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition-speed);
+}
+
+.feature-block:hover {
+  transform: translateY(-10px);
+  background-color: #000;
+}
+
+.feature-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.feature-block h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-text);
+  margin: 0 0 10px 0;
+}
+
+.feature-block p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #b0b0b0;
+}
+
+/* Unique Offset Block Styling */
+.block-1 {
+  transform: translateY(-20px);
+}
+.block-3 {
+  transform: translateY(20px);
+}
+.block-1:hover,
+.block-3:hover {
+  transform: translateY(-10px); /* Normalize hover effect */
+}
+
+/* =======================================
+SECTION 4: CLIENT/LOGO SCROLL
+=======================================
+*/
+.clients-section {
+  padding: 60px 0;
+  background-color: #fff;
+  overflow: hidden; /* Crucial for hiding repeated logos and scroll bar */
+}
+
+.client-heading {
+  margin-bottom: 40px;
+}
+
+.logo-scroller {
+  width: 100%;
+  /* This height must match image height */
+  height: 100px;
+  overflow: hidden;
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(250px * 20); /* 10 logos * 2 sets * 250px width per logo */
+  animation: scroll-logos 45s linear infinite;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-track img {
+  width: 250px;
+  height: 100px; /* fixed image height */
+  object-fit: contain;
+  padding: 0 30px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  filter: grayscale(100%);
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Keyframe Animation for Scrolling */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* Scrolls exactly one set of 10 logos */
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+  .feature-blocks {
+    grid-template-columns: 1fr; /* Stack blocks vertically on tablet */
+    gap: 30px;
+  }
+  .block-1,
+  .block-3 {
+    transform: translateY(0); /* Remove desktop offset */
+  }
+  .block-1:hover,
+  .block-3:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-section {
+    height: 500px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}

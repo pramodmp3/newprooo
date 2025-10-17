@@ -1,0 +1,257 @@
+/* --- CSS VARIABLES (Ensure consistent with navbar/footer) --- */
+:root {
+  --primary-color: #0a1931; /* Deep Navy Blue */
+  --accent-color: #ffd700; /* Vibrant Gold */
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --card-bg: #fff;
+  --hover-bg: #1a345b;
+  --transition-speed: 0.4s;
+}
+
+/* --- BASE STYLES --- */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+.logo-img {
+  height: 70px !important; /* Forces the correct size */
+  width: auto;
+  box-shadow: 0 0 10px rgb(#0a1931); /* Gold Glow */
+}
+
+.services-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px 80px 20px;
+}
+
+/* Spacer for fixed header (must match height of your navbar) */
+.header-spacer {
+  height: 80px; /* Adjust this value to match your sticky navbar height */
+}
+
+/* --- HERO BANNER --- */
+.hero-banner {
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 80px 40px;
+  margin: 20px 0;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-color-muted);
+}
+
+/* --- CORE SERVICES SECTION --- */
+.core-services {
+  padding: 40px 0;
+}
+
+.service-container {
+  display: grid;
+  /* 3 columns for desktop */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* --- UNIQUE SERVICE CARD STYLING --- */
+.service-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Creative Hover Effect: Lift and Shadow */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative Line/Accent Bar */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--primary-color);
+  transition: background-color var(--transition-speed);
+}
+
+.service-card:hover::before {
+  background-color: var(--accent-color);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  padding: 8px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  transition: all var(--transition-speed);
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+.card-content p {
+  color: var(--text-color-dark);
+  margin-bottom: 15px;
+}
+
+.key-areas {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.key-areas li {
+  font-size: 0.95rem;
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 5px;
+  color: var(--text-color-dark);
+}
+
+/* Custom List Bullet (Gold Chevron) */
+.key-areas li::before {
+  content: "»"; /* A unique arrow/chevron symbol */
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-weight: 900;
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+.read-more:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* --- CTA SECTION STYLING --- */
+.cta-section {
+  margin-top: 60px;
+  background-color: var(--primary-color);
+  padding: 60px 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-inner h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.cta-inner p {
+  font-size: 1.1rem;
+  color: var(--text-color-muted);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 15px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1200px) {
+  .service-container {
+    /* Change to 2 columns on mid-size screens */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    /* Stack into a single column for mobile */
+    grid-template-columns: 1fr;
+  }
+  .hero-banner {
+    padding: 50px 20px;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+  .page-subtitle {
+    font-size: 1rem;
+  }
+}

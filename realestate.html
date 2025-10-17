@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Law Services | STACKLY</title>
+    <link rel="stylesheet" href="finance.css" />
+    <!-- Font Import: Inter for modern professionalism -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="family-law-main">
+      <!-- Retain class for layout consistency -->
+
+      <!-- --- UNIQUE SPLIT HERO SECTION --- -->
+      <section class="law-hero">
+        <div class="hero-text-content">
+          <p class="tagline">Foundational Legal Certainty for Property</p>
+          <h1>
+            Protecting, Negotiating, and Securing Your Real Estate Assets.
+          </h1>
+          <p class="description">
+            STACKLY's real estate practice provides decisive legal support for
+            commercial development, complex transactions, leasing, and zoning
+            matters, ensuring profitable ventures.
+          </p>
+          <a href="contact.html?service=RealEstateLaw" class="cta-button"
+            >Speak with a Property Attorney</a
+          >
+        </div>
+        <div class="hero-image-placeholder">
+          <!-- Placeholder for a stock image related to buildings/architecture/keys -->
+          <div class="image-box"><img src="./assets/tree.png" alt="" /></div>
+        </div>
+      </section>
+
+      <!-- --- SERVICES AT A GLANCE (Icon Grid) --- -->
+      <section class="services-grid-section">
+        <h2 class="section-heading">Our Comprehensive Real Estate Services</h2>
+        <p class="sub-heading">
+          We cover the legal complexities of commercial, industrial, and
+          high-value residential property.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-icon-card">
+            <span class="icon">🏗️</span>
+            <h3>Commercial Development</h3>
+            <p>
+              Handling permitting, zoning appeals, construction contracts, and
+              land use approvals.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🤝</span>
+            <h3>Acquisitions & Dispositions</h3>
+            <p>
+              Due diligence, closing procedures, title review, and sales for
+              corporate real estate assets.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">📄</span>
+            <h3>Commercial Leasing</h3>
+            <p>
+              Drafting and negotiating strong commercial leases for landlords
+              and major tenants.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🏛️</span>
+            <h3>Zoning & Land Use</h3>
+            <p>
+              Representing clients before planning boards and municipal bodies
+              for variances and approvals.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">💼</span>
+            <h3>Financing & Mortgages</h3>
+            <p>
+              Structuring and documenting real estate finance deals and debt
+              agreements.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">⚖️</span>
+            <h3>Property Litigation</h3>
+            <p>
+              Dispute resolution for boundary conflicts, contract breaches, and
+              landlord-tenant issues.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- WHY STACKLY FOR REAL ESTATE LAW (Unique Block) --- -->
+      <section class="why-stackly-section">
+        <div class="why-content">
+          <h2>Why Choose STACKLY for Property Law</h2>
+          <div class="feature-list">
+            <p>
+              <strong>Transactional Speed:</strong> We understand that time is
+              money in real estate and prioritize efficient closings.
+            </p>
+            <p>
+              <strong>Development Insight:</strong> Decades of experience
+              navigating municipal politics and regulatory hurdles.
+            </p>
+            <p>
+              <strong>Clear Communication:</strong> Translating complex property
+              laws into clear, actionable advice for investors.
+            </p>
+          </div>
+          <a href="./404.html" class="learn-more-link"
+            >View Our Recent Transactions →</a
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</html>

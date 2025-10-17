@@ -1,0 +1,272 @@
+/* --- CSS VARIABLES (Ensure consistent with theme) --- */
+:root {
+  --primary-color: #0a1931; /* Deep Navy Blue */
+  --accent-color: #ffd700; /* Vibrant Gold */
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --section-bg: #fff;
+  --secondary-bg: #f7f7f7;
+  --transition-speed: 0.4s;
+}
+
+/* --- BASE STYLES --- */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  background-color: var(--secondary-bg);
+}
+.logo-img {
+  height: 70px !important; /* Forces the correct size */
+  width: auto;
+  box-shadow: 0 0 10px rgb(#0a1931); /* Gold Glow */
+}
+
+.about-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px 20px;
+}
+
+/* Spacer for fixed header (must match height of your navbar) */
+.header-spacer {
+  height: 80px; /* Adjust this value to match your sticky navbar height */
+}
+
+/* --- HERO INTRO --- */
+.hero-intro {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  border-radius: 12px;
+  margin: 20px 0 60px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.intro-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-color-muted);
+}
+
+/* --- GENERAL SECTION STYLING --- */
+.section-container {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Creative Header/Title Block */
+.section-header {
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.header-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.section-content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* --- HISTORY SECTION SPECIFICS --- */
+.history-section .section-content {
+  background: var(--section-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.history-section p {
+  margin-bottom: 20px;
+}
+
+.history-stat {
+  margin-top: 30px;
+  padding: 15px 25px;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  display: inline-block;
+}
+.history-stat span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.history-stat p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* --- VISION & MISSION SECTION SPECIFICS (Staggered/Split) --- */
+.vision-section {
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 60px 20px;
+}
+
+.vision-section .section-title {
+  color: var(--text-color-light);
+}
+.vision-section .title-underline {
+  background-color: var(--accent-color);
+}
+
+.split-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vision-box,
+.mission-box {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.vision-box {
+  background: #1a345b; /* Slightly lighter navy */
+}
+.mission-box {
+  background: #1a345b;
+}
+
+.vision-box h3,
+.mission-box h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+  padding-bottom: 10px;
+}
+.vision-box p,
+.mission-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color-muted);
+}
+
+/* --- CORE VALUES SECTION SPECIFICS (Creative Grid) --- */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.value-card {
+  background: var(--section-bg);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--primary-color);
+  transition: transform var(--transition-speed),
+    border-color var(--transition-speed);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--accent-color);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+}
+
+.value-icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto 20px auto;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.value-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+  .split-content {
+    grid-template-columns: 1fr; /* Stack vision/mission on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .values-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+  .hero-intro {
+    padding: 40px 10px;
+  }
+  .intro-title {
+    font-size: 1.8rem;
+  }
+  .section-container {
+    padding: 40px 0;
+  }
+}

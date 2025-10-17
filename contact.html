@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | STACKLY Law Firm</title>
+
+    <link rel="stylesheet" href="contact.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <!-- Spacer is necessary because the navbar is sticky/fixed -->
+    <div class="header-spacer"></div>
+
+    <main class="contact-main">
+      <section class="contact-hero">
+        <h1 class="page-title">Ready to Begin Your Legal Strategy?</h1>
+        <p class="page-subtitle">
+          We're here to listen. Use the form below or find us on the map.
+        </p>
+      </section>
+
+      <section class="contact-grid">
+        <!-- Left Column: Contact Form -->
+        <div class="form-container">
+          <form id="contact-form" action="./404.html">
+            <div class="form-group">
+              <label for="name">Your Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Area of Legal Need *</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>
+                  Select a Service Area
+                </option>
+                <option value="finance">Finance Law</option>
+                <option value="family">Family Law</option>
+                <option value="health">Health Sector Law</option>
+                <option value="employment">Labour & Employment Law</option>
+                <option value="real_estate">Real Estate Law</option>
+                <option value="technology">Technology Law</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                placeholder="Briefly describe your legal needs..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Inquiry</button>
+            <p class="form-message" id="form-message"></p>
+          </form>
+        </div>
+
+        <!-- Right Column: Map and Address Info -->
+        <div class="map-container">
+          <div id="google-map-placeholder">
+            <!-- Map Placeholder Image/Text -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.259066601449!2d-73.9878508845941!3d40.74844057932822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9ac1314ff%3A0x6b4c2b9845d0337d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1633512000000!5m2!1sen!2sus"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+
+          <div class="address-box">
+            <h3>STACKLY New York Headquarters</h3>
+            <p>101 Wall Street, Suite 2500<br />New York, NY 10005</p>
+            <a href="tel:+12125551234" class="map-link"
+              >Call Us: (212) 555-1234</a
+            >
+            <a href="mailto:contact@stacklylaw.com" class="map-link"
+              >Email: contact@stacklylaw.com</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder for the Footer content (Injected by JS loader) -->
+   
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</html>

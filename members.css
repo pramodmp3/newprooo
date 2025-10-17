@@ -1,0 +1,182 @@
+/* --- CSS VARIABLES (Ensure consistent with theme) --- */
+:root {
+  --primary-color: #0a1931; /* Deep Navy Blue */
+  --accent-color: #ffd700; /* Vibrant Gold */
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --card-bg: #fff;
+  --hover-bg: #1a345b;
+  --transition-speed: 0.3s;
+}
+
+/* --- BASE STYLES --- */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+.logo-img {
+  height: 70px !important; /* Forces the correct size */
+  width: auto;
+  box-shadow: 0 0 10px rgb(#0a1931); /* Gold Glow */
+}
+
+.members-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px 80px 20px;
+}
+
+/* Spacer for fixed header (must match height of your navbar) */
+.header-spacer {
+  height: 80px; /* Adjust this value to match your sticky navbar height */
+}
+
+/* --- HERO INTRO --- */
+.team-hero {
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  background: var(--hover-bg);
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--card-bg);
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* --- TEAM GRID LAYOUT (Unique Grid) --- */
+.team-grid-container {
+  display: grid;
+  /* 3 columns on desktop, 1.5fr for the image column, 1fr for the rest */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* --- MEMBER CARD STYLING (Creative and Colorful) --- */
+.member-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Fixed height for image consistency */
+}
+
+.member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(10%); /* Subtle professional filter */
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.member-card:hover .member-img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 25px 20px 30px 20px;
+  background: var(--card-bg);
+  position: relative;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.member-designation {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Unique Underline for Designation */
+.member-designation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* --- CONSULT NOW BUTTON (Colorful, Attractive) --- */
+.consult-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.consult-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1200px) {
+  .team-grid-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns on large tablet/small desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 30px;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .image-wrapper {
+    height: 250px;
+  }
+}

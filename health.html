@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Sector Law Services | STACKLY</title>
+    <link rel="stylesheet" href="finance.css" />
+    <!-- Font Import: Inter for modern professionalism -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="family-law-main">
+      <!-- Retain class for layout consistency -->
+
+      <!-- --- UNIQUE SPLIT HERO SECTION --- -->
+      <section class="law-hero">
+        <div class="hero-text-content">
+          <p class="tagline">Compliance, Innovation, and Patient Care</p>
+          <h1>Expert Legal Counsel for the Evolving Health Sector.</h1>
+          <p class="description">
+            STACKLY offers specialized legal support to hospitals, device
+            manufacturers, and biotech firms, navigating complex regulatory,
+            ethical, and commercial challenges.
+          </p>
+          <a href="contact.html?service=HealthLaw" class="cta-button"
+            >Consult Our Health Sector Team</a
+          >
+        </div>
+        <div class="hero-image-placeholder">
+          <!-- Placeholder for a stock image related to health/technology/research -->
+          <div class="image-box">
+            <img src="./assets/tree.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SERVICES AT A GLANCE (Icon Grid) --- -->
+      <section class="services-grid-section">
+        <h2 class="section-heading">Our Health Law Specialties</h2>
+        <p class="sub-heading">
+          We cover the intersection of health, technology, and regulation to
+          protect your practice and products.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-icon-card">
+            <span class="icon">📜</span>
+            <h3>Regulatory Compliance (HIPAA, FDA)</h3>
+            <p>
+              Ensuring full adherence to privacy, security, and medical device
+              regulations across all operations.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🔬</span>
+            <h3>Biotech & Pharma IP</h3>
+            <p>
+              Protecting intellectual property, patents, and licensing
+              agreements for R&D innovations.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🏥</span>
+            <h3>Hospital & Physician Group M&A</h3>
+            <p>
+              Structuring mergers, acquisitions, and joint ventures in the
+              healthcare industry.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">📊</span>
+            <h3>Healthcare Fraud & Abuse</h3>
+            <p>
+              Defense and preventative compliance related to Stark Law,
+              Anti-Kickback Statutes, and billing practices.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🤖</span>
+            <h3>Health Tech & Data</h3>
+            <p>
+              Advising digital health companies on data governance,
+              cybersecurity, and platform liability.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🤝</span>
+            <h3>Managed Care & Contracting</h3>
+            <p>
+              Negotiation and review of complex contracts with insurers,
+              vendors, and managed care organizations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- WHY STACKLY FOR HEALTH LAW (Unique Block) --- -->
+      <section class="why-stackly-section">
+        <div class="why-content">
+          <h2>Why Trust STACKLY with Healthcare</h2>
+          <div class="feature-list">
+            <p>
+              <strong>Deep Sector Knowledge:</strong> Our team includes
+              attorneys who previously worked in clinical and regulatory roles.
+            </p>
+            <p>
+              <strong>Proactive Compliance:</strong> We focus on preventing
+              regulatory violations before they occur.
+            </p>
+            <p>
+              <strong>Innovation Focus:</strong> Expert counsel tailored
+              specifically for emerging biotech and digital health technologies.
+            </p>
+          </div>
+          <a href="./404.html" class="learn-more-link"
+            >Meet Our Specialist Team →</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

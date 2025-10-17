@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | STACKLY</title>
+    <link rel="stylesheet" href="about.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <!-- Spacer is necessary because the navbar is sticky/fixed -->
+    <div class="header-spacer"></div>
+
+    <main class="about-main">
+      <section class="hero-intro">
+        <h1 class="intro-title">The Foundation of Legal Excellence.</h1>
+        <p class="intro-subtitle">
+          At STACKLY, our history, vision, and values are the pillars of every
+          client success story.
+        </p>
+      </section>
+
+      <!-- --- SECTION 1: OUR HISTORY --- -->
+      <section class="section-container history-section">
+        <div class="section-header">
+          <h2 class="section-title">Our Founding History</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="section-content">
+          <p>
+            Founded in 2005 by a team of forward-thinking legal experts, STACKLY
+            was established with a singular goal: to modernize the practice of
+            law. We recognized that the traditional model often failed to keep
+            pace with the rapid advancements in technology and finance. Our
+            first office in New York quickly became a hub for innovative legal
+            solutions, primarily focusing on complex litigation and emerging
+            market compliance.
+          </p>
+          <p>
+            Over the past two decades, STACKLY has grown from a boutique
+            practice into a multinational firm, yet we retain the core values of
+            accessibility and dedication. Our growth is a testament to our
+            philosophy of building long-term, strategic partnerships with our
+            clients, guiding them through every legal challenge with precision
+            and foresight.
+          </p>
+          <div class="history-stat">
+            <span>15+</span>
+            <p>Years of Pioneering Legal Service</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SECTION 2: VISION & MISSION --- -->
+      <section class="section-container vision-section">
+        <div class="section-header">
+          <h2 class="section-title">Vision & Mission</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="section-content split-content">
+          <div class="vision-box">
+            <h3>Our Vision</h3>
+            <p>
+              To be the world's most trusted legal partner, setting the standard
+              for innovation, ethical practice, and client-centric results
+              across all major industries.
+            </p>
+          </div>
+          <div class="mission-box">
+            <h3>Our Mission</h3>
+            <p>
+              To deliver pragmatic, future-proof legal strategies by combining
+              deep sectoral expertise with cutting-edge analytical tools,
+              ensuring our clients not only navigate complexity but thrive
+              within it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SECTION 3: CORE VALUES --- -->
+      <section class="section-container values-section">
+        <div class="section-header">
+          <h2 class="section-title">Our Core Values</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="section-content values-grid">
+          <div class="value-card">
+            <span class="value-icon">01</span>
+            <h3>Integrity First</h3>
+            <p>
+              Upholding the highest ethical standards in every decision,
+              ensuring transparency and unwavering honesty in our counsel.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-icon">02</span>
+            <h3>Strategic Precision</h3>
+            <p>
+              Approaching every case with meticulous planning and analytical
+              rigor, transforming complex problems into clear, actionable
+              solutions.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-icon">03</span>
+            <h3>Client Partnership</h3>
+            <p>
+              Building deep, collaborative relationships with clients,
+              understanding their business to offer bespoke and proactive legal
+              guidance.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-icon">04</span>
+            <h3>Adaptability</h3>
+            <p>
+              Embracing change and continuous learning to stay ahead of evolving
+              laws and technological shifts in the global market.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder for the Footer content (Injected by JS loader) -->
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

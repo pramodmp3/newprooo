@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Analytics Overview</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJc5mXnN/W3vGSSUaQk/jOfgL5+vW4e4xY3vGkC0N5tFv6p4a1uG4s3r7bW5xU0A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="analytics.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="logo">AppDash</div>
+        <nav class="nav-menu">
+          <ul>
+            <li class="active">
+              <a href="./404.html"
+                ><i class="fas fa-chart-line"></i> Analytics</a
+              >
+            </li>
+            <li>
+              <a href="./404.html"><i class="fas fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="./404.html"><i class="fas fa-box"></i> Orders</a>
+            </li>
+            <li>
+              <a href="./404.html"><i class="fas fa-envelope"></i> Messages</a>
+            </li>
+            <li>
+              <a href="./404.html"><i class="fas fa-cog"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="header">
+          <h1>Analytics Dashboard</h1>
+          <div class="user-profile">
+            <span>Welcome back, Admin!</span>
+            <i class="fas fa-user-circle"></i>
+          </div>
+        </header>
+
+        <section class="section-card-grid">
+          <h2>Overview</h2>
+          <div class="key-metrics-grid">
+            <div class="metric-card">
+              <i class="fas fa-chart-bar icon-analytics"></i>
+              <span class="metric-value">12,450</span>
+              <span class="metric-label">Total Visits (30 Days)</span>
+              <span class="metric-trend success"
+                ><i class="fas fa-arrow-up"></i> 12.5%</span
+              >
+            </div>
+            <div class="metric-card">
+              <i class="fas fa-dollar-sign icon-orders"></i>
+              <span class="metric-value">$85,340</span>
+              <span class="metric-label">Revenue (MTD)</span>
+              <span class="metric-trend success"
+                ><i class="fas fa-arrow-up"></i> 5.1%</span
+              >
+            </div>
+            <div class="metric-card">
+              <i class="fas fa-user-plus icon-users"></i>
+              <span class="metric-value">1,567</span>
+              <span class="metric-label">New Users</span>
+              <span class="metric-trend danger"
+                ><i class="fas fa-arrow-down"></i> 2.8%</span
+              >
+            </div>
+            <div class="metric-card">
+              <i class="fas fa-inbox icon-messages"></i>
+              <span class="metric-value">42</span>
+              <span class="metric-label">Unread Messages</span>
+              <span class="metric-trend neutral">-</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="content-breakdown">
+          <section class="half-card">
+            <h2>Recent Users</h2>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alice Johnson</td>
+                  <td>alice@example.com</td>
+                  <td><span class="status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Bob Smith</td>
+                  <td>bob@example.com</td>
+                  <td><span class="status inactive">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>Charlie Brown</td>
+                  <td>charlie@example.com</td>
+                  <td><span class="status active">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="./404.html" class="view-all">View All Users &rarr;</a>
+          </section>
+
+          <section class="half-card">
+            <h2>Latest Orders</h2>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1001</td>
+                  <td>Alice Johnson</td>
+                  <td>$45.99</td>
+                </tr>
+                <tr>
+                  <td>#1002</td>
+                  <td>David Lee</td>
+                  <td>$129.50</td>
+                </tr>
+                <tr>
+                  <td>#1003</td>
+                  <td>Eve Adams</td>
+                  <td>$19.99</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="./404.html" class="view-all">View All Orders &rarr;</a>
+          </section>
+        </div>
+
+        <section class="section-card-full">
+          <h2>Pending Messages</h2>
+          <div class="message-list">
+            <div class="message-item">
+              <span class="message-sender">Support Inquiry (Jane Doe)</span>
+              <span class="message-snippet"
+                >"I'm having trouble logging in..."</span
+              >
+              <span class="message-time">5 min ago</span>
+              <i class="fas fa-reply message-action"></i>
+            </div>
+            <div class="message-item">
+              <span class="message-sender"
+                >Sales Lead (Tech Solutions Co.)</span
+              >
+              <span class="message-snippet"
+                >"Interested in your enterprise plan..."</span
+              >
+              <span class="message-time">1 hour ago</span>
+              <i class="fas fa-reply message-action"></i>
+            </div>
+            <div class="message-item">
+              <span class="message-sender">Feedback (Mike Ross)</span>
+              <span class="message-snippet"
+                >"Great new feature, but noticed a bug..."</span
+              >
+              <span class="message-time">1 day ago</span>
+              <i class="fas fa-reply message-action"></i>
+            </div>
+          </div>
+          <a href="./404.html" class="view-all">View Full Inbox &rarr;</a>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="include.js"></script>
+</html>

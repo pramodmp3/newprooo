@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Law Services | STACKLY</title>
+
+    <link rel="stylesheet" href="finance.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="family-law-main">
+      <!-- --- UNIQUE SPLIT HERO SECTION --- -->
+      <section class="law-hero">
+        <div class="hero-text-content">
+          <p class="tagline">Compassionate Counsel, Powerful Advocacy</p>
+          <h1>Protecting Your Family, Securing Your Future.</h1>
+          <p class="description">
+            Family matters require sensitivity, discretion, and fierce legal
+            expertise. STACKLY provides personalized support through every
+            complex transition.
+          </p>
+          <a href="contact.html" class="cta-button"
+            >Request a Private Consultation</a
+          >
+        </div>
+        <div class="hero-image-placeholder">
+          <!-- Placeholder for a stock image related to peace/family/support -->
+          <div class="image-box">
+            <img src="./assets/tree.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SERVICES AT A GLANCE (Icon Grid) --- -->
+      <section class="services-grid-section">
+        <h2 class="section-heading">Our Specialized Family Law Services</h2>
+        <p class="sub-heading">
+          We cover the full spectrum of family law, focusing on fair, decisive,
+          and stable outcomes.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-icon-card">
+            <span class="icon">💍</span>
+            <h3>Divorce & Separation</h3>
+            <p>
+              Navigating uncontested and complex high-net-worth dissolution
+              proceedings with discretion.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">👧</span>
+            <h3>Child Custody & Support</h3>
+            <p>
+              Fiercely protecting your parental rights and ensuring the best
+              interests of your children.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">💰</span>
+            <h3>Asset Division</h3>
+            <p>
+              Fair and accurate division of marital property, investments, and
+              business assets.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">📝</span>
+            <h3>Prenuptial Agreements</h3>
+            <p>
+              Proactive and detailed creation of contracts to secure future
+              financial stability.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">养</span>
+            <h3>Adoption Law</h3>
+            <p>
+              Guiding families through domestic and international adoption
+              processes.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🛡️</span>
+            <h3>Domestic Violence</h3>
+            <p>
+              Immediate legal action, protection orders, and representation in
+              sensitive cases.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- WHY STACKLY FOR FAMILY LAW (Unique Block) --- -->
+      <section class="why-stackly-section">
+        <div class="why-content">
+          <h2>The STACKLY Difference in Family Law</h2>
+          <div class="feature-list">
+            <p>
+              <strong>Decisive Strategy:</strong> We build strong, goal-oriented
+              legal plans from day one.
+            </p>
+            <p>
+              <strong>Emotional Intelligence:</strong> Our counsel is always
+              delivered with empathy and understanding.
+            </p>
+            <p>
+              <strong>Discretion Assured:</strong> Your privacy is our utmost
+              priority in all family matters.
+            </p>
+          </div>
+          <a href="./404.html" class="learn-more-link"
+            >Learn More About Our Firm →</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

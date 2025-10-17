@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Law Services | STACKLY</title>
+    <link rel="stylesheet" href="finance.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Placeholder for the Navbar content (Injected by JS loader) -->
+    <div id="navbar-placeholder"></div>
+    <div class="header-spacer"></div>
+
+    <main class="family-law-main">
+      <!-- Retain class for layout consistency -->
+
+      <!-- --- UNIQUE SPLIT HERO SECTION --- -->
+      <section class="law-hero">
+        <div class="hero-text-content">
+          <p class="tagline">Strategic Guidance, Financial Security</p>
+          <h1>Navigating Complex Finance and Regulatory Landscapes.</h1>
+          <p class="description">
+            Our finance law team provides razor-sharp advice on transactions,
+            compliance, and capital structuring, protecting your firm's bottom
+            line.
+          </p>
+          <a href="contact.html" class="cta-button"
+            >Engage Our Financial Experts</a
+          >
+        </div>
+        <div class="hero-image-placeholder">
+          <!-- Placeholder for a stock image related to finance/strategy -->
+          <div class="image-box">
+            <img src="./assets/tree.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- --- SERVICES AT A GLANCE (Icon Grid) --- -->
+      <section class="services-grid-section">
+        <h2 class="section-heading">Key Finance Law Capabilities</h2>
+        <p class="sub-heading">
+          We deliver comprehensive legal solutions across investment,
+          regulatory, and corporate finance.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-icon-card">
+            <span class="icon">💼</span>
+            <h3>Mergers & Acquisitions</h3>
+            <p>
+              Structuring, negotiation, and due diligence for seamless corporate
+              transactions.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">📈</span>
+            <h3>Capital Markets</h3>
+            <p>
+              Advising on IPOs, debt and equity offerings, and continuous
+              disclosure requirements.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🔍</span>
+            <h3>Regulatory Compliance</h3>
+            <p>
+              Expert guidance on SEC, FINRA, and international financial
+              regulations.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🏦</span>
+            <h3>Banking & Lending</h3>
+            <p>
+              Representing borrowers and lenders in commercial financing,
+              secured transactions, and workouts.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">🛡️</span>
+            <h3>Financial Litigation</h3>
+            <p>
+              Defending claims related to securities fraud, shareholder
+              disputes, and regulatory enforcement.
+            </p>
+          </div>
+
+          <div class="service-icon-card">
+            <span class="icon">💳</span>
+            <h3>Fintech & Payments</h3>
+            <p>
+              Counseling new financial technology ventures on licensing and
+              product compliance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- --- WHY STACKLY FOR FINANCE LAW (Unique Block) --- -->
+      <section class="why-stackly-section">
+        <div class="why-content">
+          <h2>The STACKLY Edge in Financial Law</h2>
+          <div class="feature-list">
+            <p>
+              <strong>Sector Expertise:</strong> Deep familiarity with banking,
+              investment, and tech industries.
+            </p>
+            <p>
+              <strong>Future-Proofing:</strong> Proactive advice addressing
+              emerging regulatory risks.
+            </p>
+            <p>
+              <strong>Efficiency & Speed:</strong> Streamlined processes to meet
+              demanding deal timelines.
+            </p>
+          </div>
+          <a href="./404.html" class="learn-more-link"
+            >See Our Case Studies →</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="navbar.js"></script>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

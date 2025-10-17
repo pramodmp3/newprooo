@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAVBAR</title>
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="navbar-container">
+        <!-- Logo Section -->
+        <a href="./index.html" class="logo-area">
+          <!-- Replace 'path/to/your/logo.png' with your actual image file -->
+          <img src="./assets/logo.png" alt="Law Firm Logo" class="logo-img" />
+        </a>
+
+        <!-- Desktop Navigation & Login Button -->
+        <nav class="nav-links">
+          <ul>
+            <!-- HOME with Dropdown -->
+            <li class="dropdown">
+              <a href="index.html">HOME ▾</a>
+              <div class="dropdown-content">
+                <a href="home2.html">HOME 2</a>
+              </div>
+            </li>
+
+            <!-- SERVICES with Dropdown -->
+            <li class="dropdown">
+              <a href="./service.html">SERVICES ▾</a>
+              <div class="dropdown-content">
+                <a href="./family.html">FAMILY LAW</a>
+                <a href="./finance.html">FINANCE LAW</a>
+                <a href="./tech.html">TECHNOLOGY LAW</a>
+                <a href="./realestate.html">REALESTATE LAW</a>
+                <a href="./employe.html">LABOUR & EMPLOYMENT</a>
+                <a href="./health.html">HEALTHCARE</a>
+              </div>
+            </li>
+
+            <!-- ABOUT with Dropdown -->
+            <li class="dropdown">
+              <a href="#">ABOUT ▾</a>
+              <div class="dropdown-content">
+                <a href="./About.html">ABOUT US</a>
+                <a href="./members.html">OUR TEAM</a>
+                <a href="./career.html">CAREERS</a>
+              </div>
+            </li>
+
+            <!-- Single Links -->
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+          </ul>
+        </nav>
+
+        <!-- Login Button -->
+        <a href="./login.html" class="login-btn desktop-only">LOGIN</a>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button
+          class="mobile-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-menu-items"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Links (Initially Hidden) -->
+      <div
+        id="mobile-menu-items"
+        class="mobile-menu-content"
+        aria-hidden="true"
+      >
+        <!-- Replicating the structure for mobile view -->
+        <a href="#" class="mobile-link">HOME</a>
+        <a href="#" class="mobile-link sub-toggle">HOME 2</a>
+
+        <a href="#" class="mobile-link sub-header" data-target="mobile-services"
+          >SERVICES <span class="arrow">▼</span></a
+        >
+        <div id="mobile-services" class="mobile-sub-menu">
+          <a href="#">Litigation & Appeals</a>
+          <a href="#">Corporate Law</a>
+          <a href="#">Intellectual Property</a>
+          <a href="#">Real Estate</a>
+          <a href="#">Family Law</a>
+          <a href="#">Estate Planning</a>
+        </div>
+
+        <a href="#" class="mobile-link sub-header" data-target="mobile-about"
+          >ABOUT <span class="arrow">▼</span></a
+        >
+        <div id="mobile-about" class="mobile-sub-menu">
+          <a href="#">Our Mission</a>
+          <a href="#">Our Attorneys</a>
+          <a href="#">History & Values</a>
+        </div>
+
+        <a href="#" class="mobile-link">CONTACT</a>
+        <a href="#" class="mobile-link">BLOG</a>
+        <a href="#" class="mobile-link mobile-login-btn">LOGIN</a>
+      </div>
+    </header>
+  </body>
+</html>

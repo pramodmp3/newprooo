@@ -1,0 +1,260 @@
+/* CSS Variables for a Bright & Engaging Team Page Theme */
+:root {
+  --primary-color: #3498db; /* Bright Blue */
+  --accent-color: #f39c12; /* Vibrant Orange */
+  --light-bg: #ecf0f1; /* Very Light Grey */
+  --dark-text: #2c3e50;
+  --light-text: #fff;
+  --card-bg: #fff;
+  --radius-default: 10px;
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  color: var(--dark-text);
+}
+
+/* --- Placeholder for Navigation --- */
+.header-placeholder {
+  background-color: var(--dark-text); /* Darker for contrast with primary */
+  color: var(--light-text);
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    #2980b9
+  ); /* Gradient from primary to a darker blue */
+  color: var(--light-text);
+  margin-bottom: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 10px;
+  color: var(--light-text);
+}
+
+.hero-section p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Team Members Section --- */
+.team-members-section {
+  padding: 40px 0 80px 0;
+}
+
+.team-members-section h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.team-members-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* 3 columns on large, adjust */
+  gap: 30px;
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid var(--primary-color); /* Highlight with primary color */
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-top-color: var(--accent-color); /* Change highlight on hover */
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid var(--light-bg); /* Inner border */
+  outline: 2px solid var(--primary-color); /* Outer border */
+  transition: outline-color 0.3s ease;
+}
+
+.member-card:hover .member-photo {
+  outline-color: var(--accent-color); /* Outer border changes on hover */
+}
+
+.member-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+  color: var(--dark-text);
+}
+
+.member-title {
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Muted grey for title */
+  margin-bottom: 20px;
+}
+
+.btn-know-more {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 2px solid transparent; /* For consistent size on hover */
+}
+
+.btn-know-more:hover {
+  background-color: #2980b9; /* Darker blue */
+  transform: translateY(-2px);
+  border-color: #2980b9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .members-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* 2-3 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 2 columns */
+    gap: 20px;
+  }
+  .hero-section,
+  .team-members-section {
+    padding: 50px 0;
+  }
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .members-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+  .member-card {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}
+/* --- Extra Mobile Responsiveness --- */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-section p {
+    font-size: 0.95rem;
+  }
+
+  .team-members-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .member-card {
+    padding: 20px;
+  }
+
+  .member-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn-know-more {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-section p {
+    font-size: 0.85rem;
+  }
+
+  .member-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .member-title {
+    font-size: 0.9rem;
+  }
+
+  .btn-know-more {
+    padding: 7px 18px;
+    font-size: 0.85rem;
+  }
+
+  .team-members-section {
+    padding: 40px 10px;
+  }
+
+  .members-grid {
+    gap: 15px;
+  }
+}

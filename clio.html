@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM Pro - Relationship Management</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="clio.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Hero / Description Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>CLIO: Build Stronger Client Relationships</h1>
+        <p>
+          Deepen client trust and loyalty from the first interaction. Our
+          platform gives you the tools to manage every touchpoint, ensuring
+          personalized communication and a seamless, high-touch client
+          experience.
+        </p>
+        <a href="#pricing" class="btn-hero">Start Connecting</a>
+      </div>
+    </section>
+
+    <!-- Feature Details Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Key Management Tools</h2>
+        <div class="feature-grid">
+          <!-- Feature Card 1: Sales Pipeline -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128203;</div>
+            <!-- Clipboard/Document Icon -->
+            <h3>Visual Intake Pipeline</h3>
+            <p>
+              Stop losing potential clients in complex processes. Our visual
+              pipeline gives you a clear, drag-and-drop view of every
+              prospective client.
+            </p>
+          </div>
+
+          <!-- Feature Card 2: Marketing Automation -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#9993;</div>
+            <!-- Email Icon -->
+            <h3>Workflow Automation</h3>
+            <p>
+              Automate routine tasks and ensure firm-wide consistency.
+              Automatically generate document templates, set up deadline chains,
+              and assign follow-up tasks based on case status.
+            </p>
+          </div>
+
+          <!-- Feature Card 3: Omnichannel Communication -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128241;</div>
+            <!-- Mobile/Phone Icon -->
+            <h3>Integrated Communication</h3>
+            <p>
+              Streamline client interactions and centralize all correspondence.
+              Use a single platform for secure messaging, email sync, and
+              automated status updates directly linked to the case file.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <h2>Grow Your Firm, Choose Your Plan</h2>
+        <div class="pricing-grid">
+          <!-- Price Card 1: Starter -->
+          <div class="price-card">
+            <h3>Starter</h3>
+            <div class="price">$29<small>/mo</small></div>
+            <ul>
+              <li>
+                <span class="check-icon">&#10003;</span> 1,000 Client Contact
+                Limit
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Basic Intake Dashboard
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Seamless Email
+                Integration
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> Workflow
+                Automation
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> Full API
+                Access
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-secondary">Choose Starter</a>
+          </div>
+
+          <!-- Price Card 2: Business (Featured) -->
+          <div class="price-card featured">
+            <h3>Corporate</h3>
+            <div class="price">$79<small>/mo</small></div>
+            <ul>
+              <li>
+                <span class="check-icon">&#10003;</span> Unlimited Contacts
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Visual Intake
+                Management
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Workflow Automation (5)
+              </li>
+              <li><span class="check-icon">&#10003;</span> Priority Support</li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> Custom
+                Reporting
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-primary">Start Free Trial</a>
+          </div>
+
+          <!-- Price Card 3: Enterprise -->
+          <div class="price-card">
+            <h3>Enterprise</h3>
+            <div class="price">$199<small>/mo</small></div>
+            <ul>
+              <li>
+                <span class="check-icon">&#10003;</span> SSO/Security Management
+              </li>
+              <li><span class="check-icon">&#10003;</span> Full API Access</li>
+              <li><span class="check-icon">&#10003;</span> Custom Reporting</li>
+              <li>
+                <span class="check-icon">&#10003;</span> Dedicated Onboarding
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Unlimited Workflows
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-secondary">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

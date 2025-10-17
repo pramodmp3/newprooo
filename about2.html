@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Our Story</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="about2.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Main Navigation (Placeholder - integrate your actual navbar.html content here) -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Building the Future, Together.</h1>
+        <p>
+          Discover the passion, history, and values that drive our team every
+          single day.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our History Section -->
+    <section class="history-section">
+      <div class="container">
+        <h2>From Legal Insight to Integrated Solution</h2>
+        <div class="history-content">
+          <div class="text-block">
+            <p>
+              Founded in 2015 by a small team of legal innovators and
+              developers, our company was born from a simple frustration: why
+              were attorneys forced to choose between complex, siloed systems
+              and outdated manual processes? We set out to create intuitive,
+              unified technology—starting with our flagship CLIO (Consultation)
+              and MYCASE (Case Management) products.
+            </p>
+            <p>
+              Through years of rapid growth, key product expansions (including
+              the powerful Analytics suite), and continuous collaboration with
+              the legal community, we have grown into a trusted global partner.
+              Our journey is defined by relentless innovation and an unwavering
+              commitment to making complex legal challenges manageable and
+              scalable.
+            </p>
+            <p>
+              Today, we proudly empower thousands of legal professionals
+              worldwide, but our startup ethos remains: agility, curiosity, and
+              a deep dedication to customer success and simplifying the practice
+              of law.
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <img
+              src="./files/aboutimg.webp"
+              alt="Our team celebrating early success"
+              class="history-img-style"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vm-section">
+      <div class="container vm-grid">
+        <div class="vm-card mission">
+          <h3>Our Mission</h3>
+          <p>
+            To empower law firms and legal professionals of all sizes with
+            integrated, intelligent software solutions that simplify complex
+            legal operations and drive sustainable growth and client success.
+          </p>
+        </div>
+        <div class="vm-card vision">
+          <h3>Our Vision</h3>
+          <p>
+            To be the world's most trusted provider of comprehensive Legal
+            Intelligence platforms, making advanced law practice technology
+            accessible to every legal professional and firm
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="values-section">
+      <div class="container">
+        <h2>The Principles We Live By</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <span class="value-icon">&#128161;</span>
+            <!-- Lightbulb -->
+            <h4>Innovation</h4>
+            <p>
+              We believe in constantly challenging the status quo to deliver
+              novel and superior legal technology solutions that redefine the
+              practice of law and empower our clients.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <span class="value-icon">&#129504;</span>
+            <!-- Handshake -->
+            <h4>Integrity</h4>
+            <p>
+              We operate with transparency, honesty, and the highest ethical
+              conduct in all our dealings, ensuring the security and trust
+              essential to the legal profession.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <span class="value-icon">&#128640;</span>
+            <!-- Rocket -->
+            <h4>Velocity</h4>
+            <p>
+              We commit to speed and efficiency, ensuring our software delivers
+              instant value and continuously improves. We respond to the needs
+              of the legal industry promptly and effectively
+            </p>
+          </div>
+
+          <div class="value-item">
+            <span class="value-icon">&#128079;</span>
+            <!-- Clap -->
+            <h4>Customer Success</h4>
+            <p>
+              Our success is measured by the success and efficiency of our legal
+              customers. Their goals, from case wins to firm profitability, are
+              our mandate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps Pro - Automation & Reliability</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="mycase.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Hero / Description Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>MYCASE Pro: Run Cases Faster, Operate Smarter</h1>
+        <p>
+          Deploy your legal strategy with precision. Our platform streamlines
+          case initiation, task automation, and document execution, allowing
+          your legal teams to operate with maximum agility and deliver rapid
+          case outcomes.
+        </p>
+        <a href="#pricing" class="btn-hero">Start Now</a>
+      </div>
+    </section>
+
+    <!-- Feature Details Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Pillars of Legal Operations Success via MYCASE</h2>
+        <div class="feature-grid">
+          <!-- Feature Card 1: CI/CD -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128640;</div>
+            <!-- Rocket Icon -->
+            <h3>Continuous Case Progression</h3>
+            <p>
+              Automate your legal lifecycle for uninterrupted progress.
+              Implement repeatable, standardized workflows that automatically
+              trigger the next step.
+            </p>
+          </div>
+
+          <!-- Feature Card 2: Infrastructure as Code -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128187;</div>
+            <!-- Code/Laptop Icon -->
+            <h3>Operations as Code (OaC)</h3>
+            <p>
+              Define your firm's best practices as repeatable code. Standardize
+              all client intake forms, document templates, and task dependencies
+              into precise, automated legal blueprints.
+            </p>
+          </div>
+
+          <!-- Feature Card 3: Monitoring -->
+          <div class="feature-card">
+            <div class="icon-placeholder">&#128065;</div>
+            <!-- Eye Icon -->
+            <h3>Real-Time Operational Observability</h3>
+            <p>
+              Gain deep, immediate visibility into every legal process. Monitor
+              task execution, deadline adherence, and workflow status across
+              your entire firm in a single dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <h2>Scalable Plans for Every Legal Team</h2>
+        <div class="pricing-grid">
+          <!-- Price Card 1: Starter Pipeline -->
+          <div class="price-card">
+            <h3>Developer (User Role)</h3>
+            <div class="price">$59<small>/mo</small></div>
+            <ul>
+              <li>
+                <span class="check-icon">&#10003;</span> 5 Concurrent Workflows
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span>100 GB Document Artifact
+                Storage
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Basic Case Monitoring
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span>Dedicated
+                Integration Support
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span>Advanced
+                Security Scanning
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-secondary">Start Basic</a>
+          </div>
+
+          <!-- Price Card 2: Team (Featured) -->
+          <div class="price-card featured">
+            <h3>Team Pro</h3>
+            <div class="price">$249<small>/mo</small></div>
+            <ul>
+              <li>
+                <span class="check-icon">&#10003;</span> Unlimited workflows
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> 5 TB Artifact Document
+                Storage
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Advanced Security
+                Scanning
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Dedicated client
+                Support
+              </li>
+              <li class="disabled">
+                <span class="check-icon disabled-icon">&#10007;</span> SLA
+                Guarantee
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-primary">Try Pro Free</a>
+          </div>
+
+          <!-- Price Card 3: Enterprise Operations -->
+          <div class="price-card">
+            <h3>Operations</h3>
+            <div class="price">$599<small>/mo</small></div>
+            <ul>
+              <li><span class="check-icon">&#10003;</span> SLA Guarantee</li>
+              <li>
+                <span class="check-icon">&#10003;</span> Dedicated Cluster
+                Hosting
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Full Compliance
+                Reporting
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Priority 24/7 Leagal
+                Support
+              </li>
+              <li>
+                <span class="check-icon">&#10003;</span> Custom OaC Templates
+              </li>
+            </ul>
+            <a href="./404.html" class="btn-secondary">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

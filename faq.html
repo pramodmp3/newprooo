@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions (FAQ)</title>
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="faq.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Answers to Your Top Questions</h1>
+        <p>
+          We've compiled the most common inquiries about our platform, products,
+          and services.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Hover over a question to reveal the answer instantly.
+        </p>
+
+        <div class="faq-container">
+          <!-- FAQ Item 1: Analytics -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                What is the core difference between CLIO and MYCASE, and do they
+                work together?
+              </h3>
+              <span class="dropdown-icon">&#9660;</span>
+              <!-- Down Arrow -->
+            </div>
+            <div class="faq-answer">
+              <p>
+                CLIO is your platform for expert legal consultation and
+                strategic service delivery. MYCASE is the portal that gives
+                clients and attorneys a secure, real-time view of all case
+                files, documents, and communication. They are fully integrated
+                to manage the entire legal process.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2:  -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                How does ANALYTICS enhance the performance of both CLIO and
+                MYCASE?
+              </h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                ANALYTICS acts as the firm's business intelligence hub. It uses
+                data from both platforms to provide real-time insights into firm
+                profitability, resource allocation, and case efficiency,
+                enabling proactive, data-driven decisions.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3:  -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                Is the STACKLY platform secure for handling sensitive client and
+                case data?
+              </h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we prioritize security with bank-grade encryption and
+                multi-factor authentication. The cloud-based system ensures all
+                confidential legal and financial data is protected and compliant
+                with industry standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4: Billing -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                Can MYCASE be customized to fit the unique workflow of our
+                specific law practice area?
+              </h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, it is highly customizable. You can tailor document
+                templates, automate workflows, and adjust case status fields to
+                perfectly match your firm’s specific practice area and
+                procedures.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5: Support -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                What is the typical onboarding and data migration process when
+                adopting the STACKLY suite?
+              </h3>
+              <span class="dropdown-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our dedicated team handles the entire process, including secure
+                data migration from your existing systems. We then provide
+                comprehensive training for all users to ensure rapid adoption
+                and full optimization of the integrated platform
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>

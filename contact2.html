@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY - Contact Us</title>
+    <!-- Use a separate style file for this page -->
+    <link rel="stylesheet" href="contact2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <h1>Get in Touch with STACKLY</h1>
+      <p>We're here to answer your questions and help you stack up success.</p>
+    </section>
+
+    <!-- Main Contact Section (Form and Map) -->
+    <section class="main-contact-section">
+      <div class="contact-container">
+        <!-- Contact Form Column -->
+        <div class="contact-form-card">
+          <h2>Send Us a Message</h2>
+          <form action="./404.html">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="e.g., Partnership Inquiry"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="How can we help you today?"
+              ></textarea>
+            </div>
+            <button type="submit" class="cta-button submit-button">
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+
+        <!-- Google Map Column -->
+        <div class="map-container-card">
+          <h2>Our Location</h2>
+          <div class="map-wrapper">
+            <!-- Google Maps Placeholder Iframe -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.259066601449!2d-73.9878508845941!3d40.74844057932822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9ac1314ff%3A0x6b4c2b9845d0337d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1633512000000!5m2!1sen!2sus"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+          <div class="contact-details">
+            <p><strong>Address:</strong> 101 Stack Towers, Tech City, 10001</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    fetch("navbar2.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // ✅ Added below 3 lines
+        const script = document.createElement("script");
+        script.src = "navbar2.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Include JS -->
+  <script src="include.js"></script>
+</html>
